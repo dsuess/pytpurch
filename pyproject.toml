@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "pytpurch"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Suess <daniel@dsuess.me>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+torch = "^1.9.0"
+torchvision = "^0.10.0"
+typer = "^0.3.2"
+tqdm = "^4.61.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pylint = "^2.9.3"
+black = "^21.6b0"
+isort = "^5.9.2"
+pdbpp = "^0.10.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--doctest-modules"
+testpaths = [
+    "pytpurch",
+]
